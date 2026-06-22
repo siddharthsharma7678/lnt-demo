@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>L&amp;T tab icon</title>
+  <g fill="none" stroke="#111111" stroke-linecap="square" stroke-linejoin="miter">
+    <circle cx="256" cy="256" r="214" stroke-width="30" />
+    <path d="M 187 103 L 100 265 H 225" stroke-width="32" />
+    <path d="M 275 235 H 403" stroke-width="32" />
+    <path d="M 321 235 L 248 409" stroke-width="32" />
+  </g>
+</svg>
