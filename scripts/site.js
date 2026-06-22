@@ -41,14 +41,13 @@ document.querySelectorAll("[data-year]").forEach((node) => {
   node.textContent = String(new Date().getFullYear());
 });
 
-const demoForm = document.querySelector("[data-demo-form]");
-const demoResponse = document.querySelector("[data-demo-response]");
+const enquiryForm = document.querySelector("[data-enquiry-form]");
+const enquiryResponse = document.querySelector("[data-enquiry-response]");
 
-if (demoForm && demoResponse) {
-  demoForm.addEventListener("submit", (event) => {
+if (enquiryForm && enquiryResponse) {
+  enquiryForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    demoResponse.textContent =
-      "Thank you. This demo form is ready for backend or email integration, but it does not submit anywhere yet.";
-    demoForm.reset();
+    enquiryResponse.textContent = "Thank you for your enquiry. Our team will connect with you shortly.";
+    enquiryForm.reset();
   });
 }

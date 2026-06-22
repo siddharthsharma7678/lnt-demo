@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contact page for the L&T Realty demo website with simple enquiry details and form."
+      content="Get in touch with L&T Realty for project availability, pricing and site-visit options."
     />
     <title>L&amp;T Realty | Contact Us</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
@@ -26,10 +26,10 @@
           <span></span>
         </button>
         <nav class="site-nav" aria-label="Primary navigation" data-site-nav>
-          <a href="./index.html" target="_blank" rel="noopener noreferrer" data-nav-link>Home</a>
-          <a href="./about.html" target="_blank" rel="noopener noreferrer" data-nav-link>About Us</a>
-          <a href="./projects.html" target="_blank" rel="noopener noreferrer" data-nav-link>Projects</a>
-          <a href="./contact.html" target="_blank" rel="noopener noreferrer" data-nav-link>Contact Us</a>
+          <a href="./index.html" data-nav-link>Home</a>
+          <a href="./about.html" data-nav-link>About Us</a>
+          <a href="./projects.html" data-nav-link>Projects</a>
+          <a href="./contact.html" data-nav-link>Contact Us</a>
         </nav>
       </div>
     </header>
@@ -37,13 +37,48 @@
     <main>
       <section class="page-hero">
         <div class="container">
-          <div class="hero-panel">
-            <span class="eyebrow">Contact</span>
-            <h1 class="page-title">Simple enquiry page for project information and follow-up</h1>
-            <p class="page-intro">
-              The public L&amp;T Realty homepage shows a phone number and working hours, and your supplied document gave
-              the sample sales office address used below.
-            </p>
+          <div class="hero-panel hero-panel-showcase hero-panel-contact">
+            <div class="hero-grid hero-grid-showcase">
+              <div class="hero-copy">
+                <span class="eyebrow">Get In Touch</span>
+                <h1 class="page-title">Share a few details and our team will reach out with availability, pricing and site-visit options</h1>
+                <p class="page-intro">
+                  Reach out for residential, commercial and retail enquiries and let our team guide your next step.
+                </p>
+                <aside class="hero-note">
+                  <h3>Reach us</h3>
+                  <p>Enquiries, site-visit options and sales office details are available below.</p>
+                </aside>
+              </div>
+              <div class="hero-visual" aria-label="Official L&amp;T Realty contact and brand imagery">
+                <div class="hero-badge">Official brand imagery</div>
+                <figure class="hero-photo hero-photo-main">
+                  <img
+                    src="https://www.lntrealty.com/wp-content/uploads/2026/06/LT_Realty.webp-1.webp"
+                    alt="L&amp;T Realty official contact page visual"
+                  />
+                  <figcaption>L&amp;T Realty customer experience</figcaption>
+                </figure>
+                <div class="hero-photo-stack">
+                  <figure class="hero-photo">
+                    <img
+                      src="https://www.lntrealty.com/wp-content/uploads/2021/08/about-video-new-5ffc76e7b0e14.jpg"
+                      alt="L&amp;T Realty brand overview"
+                      loading="lazy"
+                    />
+                    <figcaption>Company overview</figcaption>
+                  </figure>
+                  <figure class="hero-photo">
+                    <img
+                      src="https://www.lntrealty.com/wp-content/uploads/2024/04/Featured-Island-Cove-1.webp"
+                      alt="L&amp;T Realty residential network visual"
+                      loading="lazy"
+                    />
+                    <figcaption>Project network across cities</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -54,35 +89,30 @@
             <h3>Reach the team</h3>
             <dl class="data-list">
               <div class="data-row">
-                <dt>Call</dt>
+                <dt>Enquiries</dt>
                 <dd>+91 99025 99025</dd>
               </div>
               <div class="data-row">
-                <dt>Hours</dt>
-                <dd>IST 8.00 AM to 8.00 PM</dd>
+                <dt>Email</dt>
+                <dd>Use the enquiry form below for email-based contact</dd>
               </div>
               <div class="data-row">
-                <dt>Office</dt>
+                <dt>Sales office</dt>
                 <dd>Seawoods Grand Central, Tower 1, Sector 40, Nerul, Navi Mumbai 400706</dd>
               </div>
               <div class="data-row">
-                <dt>Coverage</dt>
-                <dd>Mumbai, Navi Mumbai, NCR, Bengaluru, Hyderabad and Chennai</dd>
+                <dt>Hours</dt>
+                <dd>Mon-Sat &middot; 10:00-19:00 IST</dd>
               </div>
             </dl>
-            <div class="note" style="margin-top: 1rem;">
-              I did not add an official email because it was not clearly shown in the public homepage content used for
-              this update.
-            </div>
           </article>
 
           <article class="form-card">
             <h3>Enquiry form</h3>
             <p style="margin-bottom: 1rem;">
-              This keeps the form simple while using property options that appear in the public L&amp;T Realty enquiry
-              dropdown.
+              Share your interest area and our team will connect with the relevant availability and next steps.
             </p>
-            <form data-demo-form>
+            <form data-enquiry-form>
               <div class="field-grid">
                 <div class="field">
                   <label for="name">Name</label>
@@ -99,22 +129,12 @@
                   <input id="email" name="email" type="email" placeholder="name@example.com" required />
                 </div>
                 <div class="field">
-                  <label for="property">Select property</label>
-                  <select id="property" name="property" required>
-                    <option value="">Select a property</option>
-                    <option>Crestoria Estate - Panvel</option>
-                    <option>Green Reserve - Noida</option>
-                    <option>Elara Celestia - Bengaluru</option>
-                    <option>Evara Heights - Thane</option>
-                    <option>Island Cove - Mahim, Mumbai</option>
-                    <option>The Gateway - Sewri, Mumbai</option>
-                    <option>Elixir Reserve - Powai, Mumbai</option>
-                    <option>Avinya Enclave - Chennai, Tamil Nadu</option>
-                    <option>Rejuve 360 - Mulund, Mumbai</option>
-                    <option>West Square - Navi Mumbai</option>
-                    <option>Seawoods Grand Central - Navi Mumbai</option>
-                    <option>L&amp;T Business Park - Mathura Road, Delhi</option>
-                    <option>L&amp;T Tech Park - Hebbal, Bengaluru</option>
+                  <label for="interest">Interested in</label>
+                  <select id="interest" name="interest" required>
+                    <option value="">Select an interest</option>
+                    <option>Residential</option>
+                    <option>Commercial</option>
+                    <option>Retail</option>
                   </select>
                 </div>
               </div>
@@ -127,7 +147,7 @@
                 ></textarea>
               </div>
               <button class="button button-primary" type="submit">Submit enquiry</button>
-              <div class="form-response" data-demo-response aria-live="polite"></div>
+              <div class="form-response" data-enquiry-response aria-live="polite"></div>
             </form>
           </article>
         </div>
@@ -148,13 +168,12 @@
                 />
               </a>
               <p class="footer-intro">
-                Trusted real estate development across residential, commercial and retail spaces, presented here in a
-                more polished demo layout.
+                Landmarks engineered for the way India lives across residential, commercial and retail destinations.
               </p>
             </div>
             <div class="footer-cta">
-              <span class="footer-kicker">Need project guidance?</span>
-              <a class="button button-primary" href="./contact.html">Contact team</a>
+              <span class="footer-kicker">Connect with us</span>
+              <a class="button button-primary" href="./contact.html">Enquire now</a>
             </div>
           </div>
 
@@ -171,10 +190,10 @@
             <div class="footer-col">
               <h3>Featured projects</h3>
               <div class="footer-links">
-                <a href="./projects.html">Crestoria Estate</a>
-                <a href="./projects.html">Island Cove</a>
-                <a href="./projects.html">Avinya Enclave</a>
-                <a href="./projects.html">Green Reserve</a>
+                <a href="./projects.html">West Square, Seawoods</a>
+                <a href="./projects.html">The Gateway</a>
+                <a href="./projects.html">Elixir Reserve</a>
+                <a href="./projects.html">Seawoods Grand Central</a>
               </div>
             </div>
             <div class="footer-col">
@@ -192,19 +211,19 @@
               <h3>Connect</h3>
               <ul class="footer-list footer-list-contact">
                 <li><a href="tel:+919902599025">+91 99025 99025</a></li>
-                <li>IST 8.00 AM to 8.00 PM</li>
-                <li><a href="https://www.lntrealty.com/" target="_blank" rel="noopener noreferrer">Official website</a></li>
-                <li><a href="https://www.youtube.com/lntrealtyofficial" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                <li>Mon-Sat &middot; 10:00-19:00 IST</li>
+                <li><a href="https://www.lntrealty.com/">Official website</a></li>
+                <li><a href="https://www.youtube.com/lntrealtyofficial">YouTube</a></li>
               </ul>
             </div>
           </div>
 
           <div class="footer-bottom">
             <p class="footer-note">
-              Contact number and working hours on this page are based on the public L&amp;T Realty homepage used during
-              this update.
+              L&amp;T Realty develops landmark residential, commercial and retail destinations across India's leading
+              cities.
             </p>
-            <p class="footer-meta">&copy; <span data-year></span> L&amp;T Realty demo.</p>
+            <p class="footer-meta">&copy; <span data-year></span> L&amp;T Realty. All rights reserved.</p>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Projects page for the L&T Realty demo website using public project information."
+      content="Explore a selection of L&T Realty residential, mixed-use and landmark developments across India."
     />
     <title>L&amp;T Realty | Projects</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
@@ -26,10 +26,10 @@
           <span></span>
         </button>
         <nav class="site-nav" aria-label="Primary navigation" data-site-nav>
-          <a href="./index.html" target="_blank" rel="noopener noreferrer" data-nav-link>Home</a>
-          <a href="./about.html" target="_blank" rel="noopener noreferrer" data-nav-link>About Us</a>
-          <a href="./projects.html" target="_blank" rel="noopener noreferrer" data-nav-link>Projects</a>
-          <a href="./contact.html" target="_blank" rel="noopener noreferrer" data-nav-link>Contact Us</a>
+          <a href="./index.html" data-nav-link>Home</a>
+          <a href="./about.html" data-nav-link>About Us</a>
+          <a href="./projects.html" data-nav-link>Projects</a>
+          <a href="./contact.html" data-nav-link>Contact Us</a>
         </nav>
       </div>
     </header>
@@ -37,13 +37,94 @@
     <main>
       <section class="page-hero">
         <div class="container">
-          <div class="hero-panel">
-            <span class="eyebrow">Projects</span>
-            <h1 class="page-title">Current public projects shown on the L&amp;T Realty website</h1>
-            <p class="page-intro">
-              This page keeps the UI simple and organizes the public project names into residential, commercial and
-              completed sections.
-            </p>
+          <div class="hero-panel hero-panel-showcase hero-panel-projects">
+            <div class="hero-grid hero-grid-showcase">
+              <div class="hero-copy">
+                <span class="eyebrow">Our Developments</span>
+                <h1 class="page-title">A selection of residential, commercial and mixed-use developments across India</h1>
+                <p class="page-intro">
+                  Explore a curated snapshot of landmark projects across Navi Mumbai, Mumbai, Powai and Bengaluru.
+                </p>
+                <aside class="hero-note">
+                  <h3>Current development snapshot</h3>
+                  <p>Residential, mixed-use and operational destinations across India's leading urban corridors.</p>
+                </aside>
+              </div>
+              <div class="hero-visual" aria-label="Official L&amp;T Realty project imagery">
+                <div class="hero-badge">Official project visuals</div>
+                <figure class="hero-photo hero-photo-main">
+                  <img
+                    src="https://www.lntrealty.com/wp-content/uploads/2026/03/Untitled-design-16.png"
+                    alt="L&amp;T Realty Crestoria Estate in Panvel"
+                  />
+                  <figcaption>Crestoria Estate, Panvel</figcaption>
+                </figure>
+                <div class="hero-photo-stack">
+                  <figure class="hero-photo">
+                    <img
+                      src="https://www.lntrealty.com/wp-content/uploads/2025/09/LT-Realty_Website_387x284.webp"
+                      alt="L&amp;T Realty Green Reserve in Noida"
+                      loading="lazy"
+                    />
+                    <figcaption>Green Reserve, Noida</figcaption>
+                  </figure>
+                  <figure class="hero-photo">
+                    <img
+                      src="https://www.lntrealty.com/wp-content/uploads/2025/03/V06-1.png"
+                      alt="L&amp;T Realty Elara Celestia in Bengaluru"
+                      loading="lazy"
+                    />
+                    <figcaption>Elara Celestia, Bengaluru</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="grid-3">
+            <article class="project-card">
+              <figure class="project-card-media">
+                <img
+                  src="https://www.lntrealty.com/wp-content/uploads/2024/04/Featured-Island-Cove-1.webp"
+                  alt="L&amp;T Realty Island Cove in Mahim, Mumbai"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="project-card-body">
+                <h3>Island Cove</h3>
+                <p>Mahim, Mumbai</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <figure class="project-card-media">
+                <img
+                  src="https://www.lntrealty.com/wp-content/uploads/2023/08/Avinya-Enclave-Masthead-New.webp"
+                  alt="L&amp;T Realty Avinya Enclave in Chennai"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="project-card-body">
+                <h3>Avinya Enclave</h3>
+                <p>Chennai, Tamil Nadu</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <figure class="project-card-media">
+                <img
+                  src="https://www.lntrealty.com/wp-content/uploads/2024/12/Evara-Heights-Thane.webp"
+                  alt="L&amp;T Realty Evara Heights in Thane"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="project-card-body">
+                <h3>Evara Heights</h3>
+                <p>Thane, MMR</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -51,202 +132,75 @@
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <h2>Residential projects</h2>
-            <p>
-              Status is based on how projects are grouped or labeled on the official site. Rejuve 360 and West Square are
-              listed under the official "Ongoing" residential menu.
-            </p>
+            <h2>Project portfolio</h2>
+            <p>A selection of residential and mixed-use developments highlighted in the current brand content.</p>
           </div>
           <div class="table-card table-wrap">
             <table>
               <thead>
                 <tr>
                   <th>Project</th>
+                  <th>Type</th>
                   <th>Location</th>
+                  <th>Configuration</th>
                   <th>Status</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Crestoria Estate</strong></td>
-                  <td>Panvel, Maharashtra</td>
-                  <td>New launch</td>
-                </tr>
-                <tr>
-                  <td><strong>Island Cove</strong></td>
-                  <td>Mahim, Mumbai</td>
-                  <td>New tower launch</td>
-                </tr>
-                <tr>
-                  <td><strong>Avinya Enclave</strong></td>
-                  <td>Chennai, Tamil Nadu</td>
-                  <td>New phase launch</td>
-                </tr>
-                <tr>
-                  <td><strong>Green Reserve</strong></td>
-                  <td>Noida</td>
-                  <td>Ongoing</td>
-                </tr>
-                <tr>
-                  <td><strong>Elara Celestia</strong></td>
-                  <td>Bengaluru</td>
-                  <td>Ongoing</td>
-                </tr>
-                <tr>
-                  <td><strong>Evara Heights</strong></td>
-                  <td>Thane, MMR</td>
-                  <td>Ongoing</td>
-                </tr>
-                <tr>
-                  <td><strong>Elixir Reserve</strong></td>
-                  <td>Powai, Mumbai</td>
-                  <td>Ongoing</td>
+                  <td><strong>West Square, Seawoods</strong></td>
+                  <td>Residential</td>
+                  <td>Navi Mumbai</td>
+                  <td>2,3,4 BHK</td>
+                  <td>Under construction</td>
                 </tr>
                 <tr>
                   <td><strong>The Gateway</strong></td>
+                  <td>Residential</td>
                   <td>Sewri, Mumbai</td>
-                  <td>Ongoing</td>
+                  <td>3,4 BHK</td>
+                  <td>New launch</td>
                 </tr>
                 <tr>
-                  <td><strong>Rejuve 360</strong></td>
-                  <td>Mulund, Mumbai</td>
-                  <td>Ongoing</td>
+                  <td><strong>Elixir Reserve</strong></td>
+                  <td>Residential</td>
+                  <td>Powai, Mumbai</td>
+                  <td>2,3,4 BHK</td>
+                  <td>Under construction</td>
                 </tr>
-                <tr>
-                  <td><strong>West Square</strong></td>
-                  <td>Navi Mumbai</td>
-                  <td>Ongoing</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>Commercial and retail projects</h2>
-            <p>These entries come from the commercial sections shown on the official L&amp;T Realty website.</p>
-          </div>
-          <div class="table-card table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Project</th>
-                  <th>Location or segment</th>
-                  <th>Category</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>L&amp;T Tech Park 2</strong></td>
-                  <td>Offices for BTS and leasing</td>
-                  <td>Commercial</td>
-                </tr>
-                <tr>
-                  <td><strong>L&amp;T Tech Park, Bengaluru</strong></td>
-                  <td>Hebbal, Bengaluru</td>
-                  <td>Commercial</td>
-                </tr>
-                <tr>
-                  <td><strong>L&amp;T Innovation Campus, Mumbai</strong></td>
-                  <td>Mumbai</td>
-                  <td>Commercial</td>
-                </tr>
-                <tr>
-                  <td><strong>Seawoods Grand Central</strong></td>
-                  <td>Navi Mumbai</td>
-                  <td>Commercial</td>
-                </tr>
-                <tr>
-                  <td><strong>L&amp;T Business Park, Delhi</strong></td>
-                  <td>Mathura Road, Delhi</td>
-                  <td>Commercial</td>
-                </tr>
-                <tr>
-                  <td><strong>Elixir Drive</strong></td>
-                  <td>Retail</td>
-                  <td>Retail</td>
-                </tr>
-                <tr>
-                  <td><strong>L&amp;T Business Towers</strong></td>
-                  <td>Powai (W), Mumbai</td>
-                  <td>Ongoing commercial</td>
-                </tr>
-                <tr>
-                  <td><strong>L&amp;T Innovation Campus</strong></td>
-                  <td>Chennai</td>
-                  <td>Ongoing commercial</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>Completed portfolio highlights</h2>
-            <p>These projects are grouped under completed sections on the official site.</p>
-          </div>
-          <div class="table-card table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Project</th>
-                  <th>Location</th>
-                  <th>Type</th>
-                </tr>
-              </thead>
-              <tbody>
                 <tr>
                   <td><strong>Crescent Bay</strong></td>
-                  <td>Parel, Mumbai</td>
                   <td>Residential</td>
+                  <td>Parel, Mumbai</td>
+                  <td>2,3,4 BHK</td>
+                  <td>Completed</td>
                 </tr>
                 <tr>
                   <td><strong>Emerald Isle</strong></td>
-                  <td>Powai, Mumbai</td>
                   <td>Residential</td>
+                  <td>Powai, Mumbai</td>
+                  <td>1,2,3 BHK</td>
+                  <td>Completed</td>
                 </tr>
                 <tr>
                   <td><strong>Raintree Boulevard</strong></td>
+                  <td>Residential</td>
                   <td>Hebbal, Bengaluru</td>
-                  <td>Residential</td>
+                  <td>3,4 BHK</td>
+                  <td>Completed</td>
                 </tr>
                 <tr>
-                  <td><strong>Vihaan</strong></td>
-                  <td>Vadodara, Gujarat</td>
-                  <td>Residential</td>
-                </tr>
-                <tr>
-                  <td><strong>Seawoods Residences</strong></td>
+                  <td><strong>Seawoods Grand Central</strong></td>
+                  <td>Mixed-use</td>
                   <td>Navi Mumbai</td>
-                  <td>Residential</td>
-                </tr>
-                <tr>
-                  <td><strong>L&amp;T Tech Park 1</strong></td>
-                  <td>Commercial completed portfolio</td>
-                  <td>Commercial</td>
-                </tr>
-                <tr>
-                  <td><strong>L&amp;T Business Park, Mumbai</strong></td>
-                  <td>Powai, Mumbai</td>
-                  <td>Commercial</td>
-                </tr>
-                <tr>
-                  <td><strong>L&amp;T Business Park (TC IV)</strong></td>
-                  <td>Powai, Mumbai</td>
-                  <td>Commercial</td>
+                  <td>Retail &middot; Office &middot; Transit</td>
+                  <td>Operational</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="note" style="margin-top: 1rem;">
-            Some location and status wording above is condensed from the official public website so the table stays
-            simple and easy to scan.
+            Filters on the live site: All &middot; Residential &middot; Commercial &middot; Mixed-use.
           </div>
         </div>
       </section>
@@ -266,13 +220,12 @@
                 />
               </a>
               <p class="footer-intro">
-                Trusted real estate development across residential, commercial and retail spaces, presented here in a
-                more polished demo layout.
+                Landmarks engineered for the way India lives across residential, commercial and retail destinations.
               </p>
             </div>
             <div class="footer-cta">
-              <span class="footer-kicker">Need project guidance?</span>
-              <a class="button button-primary" href="./contact.html">Contact team</a>
+              <span class="footer-kicker">Connect with us</span>
+              <a class="button button-primary" href="./contact.html">Enquire now</a>
             </div>
           </div>
 
@@ -289,10 +242,10 @@
             <div class="footer-col">
               <h3>Featured projects</h3>
               <div class="footer-links">
-                <a href="./projects.html">Crestoria Estate</a>
-                <a href="./projects.html">Island Cove</a>
-                <a href="./projects.html">Avinya Enclave</a>
-                <a href="./projects.html">Green Reserve</a>
+                <a href="./projects.html">West Square, Seawoods</a>
+                <a href="./projects.html">The Gateway</a>
+                <a href="./projects.html">Elixir Reserve</a>
+                <a href="./projects.html">Seawoods Grand Central</a>
               </div>
             </div>
             <div class="footer-col">
@@ -310,18 +263,19 @@
               <h3>Connect</h3>
               <ul class="footer-list footer-list-contact">
                 <li><a href="tel:+919902599025">+91 99025 99025</a></li>
-                <li>IST 8.00 AM to 8.00 PM</li>
-                <li><a href="https://www.lntrealty.com/" target="_blank" rel="noopener noreferrer">Official website</a></li>
-                <li><a href="https://www.facebook.com/LnTRealty/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li>Mon-Sat &middot; 10:00-19:00 IST</li>
+                <li><a href="https://www.lntrealty.com/">Official website</a></li>
+                <li><a href="https://www.facebook.com/LnTRealty/">Facebook</a></li>
               </ul>
             </div>
           </div>
 
           <div class="footer-bottom">
             <p class="footer-note">
-              This project list is a simplified presentation of public information from the official L&amp;T Realty site.
+              L&amp;T Realty develops landmark residential, commercial and retail destinations across India's leading
+              cities.
             </p>
-            <p class="footer-meta">&copy; <span data-year></span> L&amp;T Realty demo.</p>
+            <p class="footer-meta">&copy; <span data-year></span> L&amp;T Realty. All rights reserved.</p>
           </div>
         </div>
       </div>
