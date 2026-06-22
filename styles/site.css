@@ -219,7 +219,7 @@ img {
       rgba(9, 27, 49, 0.84) 46%,
       rgba(9, 27, 49, 0.34) 100%
     ),
-    url("https://www.lntResidence.com/wp-content/uploads/2026/06/LT_Residence.webp-1.webp")
+    url("../images/lt-realty-hero.webp")
       center/cover;
   transform: scale(1.03);
 }
@@ -247,7 +247,7 @@ img {
       rgba(9, 27, 49, 0.84) 46%,
       rgba(9, 27, 49, 0.34) 100%
     ),
-    url("https://www.lntResidence.com/wp-content/uploads/2021/08/about-video-new-5ffc76e7b0e14.jpg")
+    url("../images/about-video.jpg")
       center/cover;
 }
 
@@ -259,7 +259,7 @@ img {
       rgba(9, 27, 49, 0.84) 46%,
       rgba(9, 27, 49, 0.34) 100%
     ),
-    url("https://www.lntResidence.com/wp-content/uploads/2026/03/Untitled-design-16.png")
+    url("../images/untitled-design-16.png")
       center/cover;
 }
 
@@ -271,7 +271,7 @@ img {
       rgba(9, 27, 49, 0.84) 46%,
       rgba(9, 27, 49, 0.34) 100%
     ),
-    url("https://www.lntResidence.com/wp-content/uploads/2026/06/LT_Residence.webp-1.webp")
+    url("../images/lt-realty-hero.webp")
       center/cover;
 }
 
@@ -819,7 +819,7 @@ td strong {
       rgba(9, 27, 49, 0.9) 42%,
       rgba(9, 27, 49, 0.72) 100%
     ),
-    url("https://www.lntResidence.com/wp-content/uploads/2021/08/about-video-new-5ffc76e7b0e14.jpg")
+    url("../images/about-video.jpg")
       center/cover;
 }
 
