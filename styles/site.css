@@ -75,19 +75,12 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
+  flex-shrink: 0;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #ffe169 0%, var(--accent-strong) 100%);
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 700;
-  box-shadow: 0 6px 18px rgba(255, 203, 5, 0.28);
+.brand-logo {
+  width: clamp(134px, 15vw, 184px);
+  height: auto;
 }
 
 .brand-copy {
@@ -536,14 +529,48 @@ img {
 }
 
 .project-card {
-  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   border: 1px solid #f0dfb8;
   border-radius: var(--radius);
   background: #ffffff;
+  box-shadow: 0 14px 32px rgba(20, 40, 71, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(20, 40, 71, 0.14);
+}
+
+.project-card-media {
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #dfe7f1;
+}
+
+.project-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.project-card:hover .project-card-media img {
+  transform: scale(1.04);
+}
+
+.project-card-body {
+  padding: 1.15rem;
+  display: grid;
+  gap: 0.45rem;
+  flex: 1;
 }
 
 .project-card h3 {
-  margin: 0 0 0.45rem;
+  margin: 0;
   font-size: 1.08rem;
 }
 
@@ -696,21 +723,15 @@ td strong {
 }
 
 .site-footer {
-  padding: 1rem 0 2rem;
-}
-
-.site-footer-shell {
   position: relative;
   overflow: hidden;
-  padding: clamp(1.3rem, 2vw + 0.8rem, 2.1rem);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: calc(var(--radius) + 6px);
+  margin-top: 1rem;
+  padding: 0;
   background: #0f2746;
   color: #ffffff;
-  box-shadow: 0 24px 56px rgba(10, 27, 51, 0.24);
 }
 
-.site-footer-shell::before {
+.site-footer::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -719,9 +740,23 @@ td strong {
     url("https://www.lntrealty.com/wp-content/uploads/2021/08/about-video-new-5ffc76e7b0e14.jpg") center/cover;
 }
 
-.site-footer-shell > * {
+.site-footer .container {
   position: relative;
   z-index: 1;
+}
+
+.site-footer-shell {
+  padding: clamp(1.4rem, 2vw + 0.9rem, 2.4rem) 0 2rem;
+  color: #ffffff;
+  background: transparent;
+}
+
+.site-footer-shell::before {
+  content: none;
+}
+
+.site-footer-shell > * {
+  position: static;
 }
 
 .footer-top {
@@ -733,16 +768,13 @@ td strong {
 }
 
 .footer-brand {
-  align-items: flex-start;
+  padding: 0.55rem 0.8rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
 }
 
-.footer-brand .brand-title,
-.footer-brand .brand-subtitle {
-  color: #ffffff;
-}
-
-.footer-brand .brand-subtitle {
-  opacity: 0.76;
+.footer-brand .brand-logo {
+  width: clamp(144px, 16vw, 192px);
 }
 
 .footer-brand-block {
@@ -955,11 +987,11 @@ td strong {
   }
 
   .site-footer {
-    padding-top: 0.5rem;
+    margin-top: 0.5rem;
   }
 
   .site-footer-shell {
-    padding: 1rem;
+    padding: 1rem 0 1.25rem;
   }
 
   .footer-grid {
