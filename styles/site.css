@@ -176,6 +176,10 @@ img {
   padding: 3rem 0;
 }
 
+.page-hero-home {
+  padding: 3.5rem 0 3.25rem;
+}
+
 .hero-panel {
   padding: 2.25rem;
   border-radius: var(--radius);
@@ -190,6 +194,51 @@ img {
   grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
   gap: 1.5rem;
   align-items: start;
+}
+
+.hero-panel-showcase {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.5rem, 2vw + 1rem, 2.35rem);
+  border: 0;
+  background: #0f2746;
+  box-shadow: 0 28px 64px rgba(10, 27, 51, 0.26);
+  color: #ffffff;
+}
+
+.hero-panel-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(9, 27, 49, 0.94) 0%, rgba(9, 27, 49, 0.84) 46%, rgba(9, 27, 49, 0.34) 100%),
+    url("https://www.lntrealty.com/wp-content/uploads/2026/06/LT_Realty.webp-1.webp") center/cover;
+  transform: scale(1.03);
+}
+
+.hero-panel-showcase::after {
+  content: "";
+  position: absolute;
+  right: -10%;
+  bottom: -30%;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 203, 5, 0.36) 0%, rgba(255, 203, 5, 0) 68%);
+}
+
+.hero-grid-showcase {
+  position: relative;
+  z-index: 1;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: clamp(1.5rem, 2vw, 2rem);
+  align-items: center;
+}
+
+.hero-copy,
+.hero-visual {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
@@ -216,11 +265,30 @@ img {
   color: var(--muted);
 }
 
+.hero-panel-showcase .eyebrow {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 203, 5, 0.16);
+  color: #ffe169;
+}
+
+.hero-panel-showcase p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
 .hero-note {
   padding: 1rem;
   border: 1px solid #ecd7a6;
   border-radius: var(--radius);
   background: #fffaf0;
+}
+
+.hero-panel-showcase .hero-note {
+  margin-top: 1.5rem;
+  max-width: 31rem;
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .hero-note h2,
@@ -233,6 +301,12 @@ img {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.hero-panel-showcase .hero-note p,
+.hero-panel-showcase .hero-note h2,
+.hero-panel-showcase .hero-note h3 {
+  color: #ffffff;
 }
 
 .hero-actions {
@@ -262,6 +336,92 @@ img {
   border-color: var(--accent);
   background: #ffffff;
   color: var(--accent-strong);
+}
+
+.hero-panel-showcase .button-primary {
+  box-shadow: 0 14px 28px rgba(255, 203, 5, 0.22);
+}
+
+.hero-panel-showcase .button-secondary {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.hero-visual {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-badge {
+  justify-self: end;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-photo {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 22px 44px rgba(5, 18, 35, 0.3);
+}
+
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 48%;
+  background: linear-gradient(180deg, rgba(8, 17, 31, 0) 0%, rgba(8, 17, 31, 0.84) 100%);
+  pointer-events: none;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.hero-photo:hover img {
+  transform: scale(1.04);
+}
+
+.hero-photo-main {
+  aspect-ratio: 16 / 10;
+  min-height: 370px;
+}
+
+.hero-photo-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hero-photo-stack .hero-photo {
+  aspect-ratio: 1.08;
+  min-height: 180px;
+}
+
+.hero-photo figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .button-light {
@@ -536,7 +696,147 @@ td strong {
 }
 
 .site-footer {
-  padding: 0 0 2rem;
+  padding: 1rem 0 2rem;
+}
+
+.site-footer-shell {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.3rem, 2vw + 0.8rem, 2.1rem);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: calc(var(--radius) + 6px);
+  background: #0f2746;
+  color: #ffffff;
+  box-shadow: 0 24px 56px rgba(10, 27, 51, 0.24);
+}
+
+.site-footer-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(9, 27, 49, 0.97) 0%, rgba(9, 27, 49, 0.9) 42%, rgba(9, 27, 49, 0.72) 100%),
+    url("https://www.lntrealty.com/wp-content/uploads/2021/08/about-video-new-5ffc76e7b0e14.jpg") center/cover;
+}
+
+.site-footer-shell > * {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding-bottom: 1.4rem;
+}
+
+.footer-brand {
+  align-items: flex-start;
+}
+
+.footer-brand .brand-title,
+.footer-brand .brand-subtitle {
+  color: #ffffff;
+}
+
+.footer-brand .brand-subtitle {
+  opacity: 0.76;
+}
+
+.footer-brand-block {
+  max-width: 42rem;
+}
+
+.footer-intro {
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 58ch;
+}
+
+.footer-cta {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: end;
+}
+
+.footer-kicker {
+  color: #ffe169;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-col h3 {
+  margin: 0 0 0.85rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.footer-links {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.footer-links a,
+.footer-list a {
+  color: rgba(255, 255, 255, 0.78);
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible,
+.footer-list a:hover,
+.footer-list a:focus-visible {
+  color: #ffe169;
+  transform: translateX(2px);
+}
+
+.footer-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-list-contact li {
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.2rem;
+}
+
+.footer-note,
+.footer-meta {
+  margin: 0;
+}
+
+.footer-note {
+  max-width: 62ch;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-meta {
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
 }
 
 .footer-panel {
@@ -598,6 +898,28 @@ td strong {
     display: inline-grid;
     place-items: center;
   }
+
+  .hero-grid-showcase {
+    gap: 1.25rem;
+  }
+
+  .hero-badge {
+    justify-self: start;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-cta {
+    justify-items: start;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -618,5 +940,34 @@ td strong {
   .data-row {
     grid-template-columns: 1fr;
     gap: 0.35rem;
+  }
+
+  .hero-panel-showcase {
+    padding: 1rem;
+  }
+
+  .hero-photo-main {
+    min-height: 280px;
+  }
+
+  .hero-photo-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    padding-top: 0.5rem;
+  }
+
+  .site-footer-shell {
+    padding: 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer-meta {
+    white-space: normal;
   }
 }
