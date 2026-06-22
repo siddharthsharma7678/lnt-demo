@@ -9,6 +9,8 @@ export default defineConfig({
         about: resolve(__dirname, 'about.html'),
         projects: resolve(__dirname, 'projects.html'),
         contact: resolve(__dirname, 'contact.html'),
+        terms: resolve(__dirname, 'terms.html'),
+        privacy: resolve(__dirname, 'privacy.html'),
       },
     },
   },

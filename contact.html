@@ -16,11 +16,7 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="L&amp;T Realty home">
-          <img
-            class="brand-logo"
-            src="https://www.lntrealty.com/wp-content/themes/lntrealty/assets/images/brand-logo-desktop.webp"
-            alt="L&amp;T Realty"
-          />
+          <span class="brand-wordmark">L&amp;T Realty</span>
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle>
           <span></span>
@@ -40,41 +36,33 @@
           <div class="hero-panel hero-panel-showcase hero-panel-contact">
             <div class="hero-grid hero-grid-showcase">
               <div class="hero-copy">
-                <span class="eyebrow">Get In Touch</span>
-                <h1 class="page-title">Share a few details and our team will reach out with availability, pricing and site-visit options</h1>
+                <span class="eyebrow">GET IN TOUCH</span>
+                <h1 class="page-title">Get in touch</h1>
                 <p class="page-intro">
-                  Reach out for residential, commercial and retail enquiries and let our team guide your next step.
+                  Share a few details and our team will reach out with availability, pricing and site-visit options.
                 </p>
-                <aside class="hero-note">
-                  <h3>Reach us</h3>
-                  <p>Enquiries, site-visit options and sales office details are available below.</p>
-                </aside>
               </div>
-              <div class="hero-visual" aria-label="Official L&amp;T Realty contact and brand imagery">
-                <div class="hero-badge">Official brand imagery</div>
+              <div class="hero-visual" aria-label="L&amp;T Realty contact imagery">
                 <figure class="hero-photo hero-photo-main">
                   <img
                     src="https://www.lntrealty.com/wp-content/uploads/2026/06/LT_Realty.webp-1.webp"
-                    alt="L&amp;T Realty official contact page visual"
+                    alt="L&amp;T Realty contact imagery"
                   />
-                  <figcaption>L&amp;T Realty customer experience</figcaption>
                 </figure>
                 <div class="hero-photo-stack">
                   <figure class="hero-photo">
                     <img
                       src="https://www.lntrealty.com/wp-content/uploads/2021/08/about-video-new-5ffc76e7b0e14.jpg"
-                      alt="L&amp;T Realty brand overview"
+                      alt="L&amp;T Realty brand imagery"
                       loading="lazy"
                     />
-                    <figcaption>Company overview</figcaption>
                   </figure>
                   <figure class="hero-photo">
                     <img
                       src="https://www.lntrealty.com/wp-content/uploads/2024/04/Featured-Island-Cove-1.webp"
-                      alt="L&amp;T Realty residential network visual"
+                      alt="L&amp;T Realty project imagery"
                       loading="lazy"
                     />
-                    <figcaption>Project network across cities</figcaption>
                   </figure>
                 </div>
               </div>
@@ -86,15 +74,15 @@
       <section class="section">
         <div class="container grid-2">
           <article class="info-card">
-            <h3>Reach the team</h3>
+            <h3>Reach us</h3>
             <dl class="data-list">
               <div class="data-row">
                 <dt>Enquiries</dt>
                 <dd>+91 99025 99025</dd>
               </div>
-              <div class="data-row">
+              <div class="data-row" data-contact-email-row hidden>
                 <dt>Email</dt>
-                <dd>Use the enquiry form below for email-based contact</dd>
+                <dd><a data-contact-email-link href="#"></a></dd>
               </div>
               <div class="data-row">
                 <dt>Sales office</dt>
@@ -108,10 +96,7 @@
           </article>
 
           <article class="form-card">
-            <h3>Enquiry form</h3>
-            <p style="margin-bottom: 1rem;">
-              Share your interest area and our team will connect with the relevant availability and next steps.
-            </p>
+            <h3>Enquiry form fields</h3>
             <form data-enquiry-form>
               <div class="field-grid">
                 <div class="field">
@@ -146,7 +131,11 @@
                   placeholder="Tell us which city or project you are interested in"
                 ></textarea>
               </div>
-              <button class="button button-primary" type="submit">Submit enquiry</button>
+              <button class="button button-primary" type="submit">Enquire now</button>
+              <p class="form-legal">
+                By submitting this enquiry, you agree to our <a href="./terms.html">Terms &amp; Conditions</a> and
+                <a href="./privacy.html">Privacy Policy</a>.
+              </p>
               <div class="form-response" data-enquiry-response aria-live="polite"></div>
             </form>
           </article>
@@ -158,72 +147,43 @@
       <div class="container">
         <div class="site-footer-shell">
           <div class="footer-top">
-            <div class="footer-brand-block">
-              <a class="brand footer-brand" href="./index.html" aria-label="L&amp;T Realty home">
-                <img
-                  class="brand-logo"
-                  src="https://www.lntrealty.com/wp-content/themes/lntrealty/assets/images/brand-logo-desktop.webp"
-                  alt="L&amp;T Realty"
-                  loading="lazy"
-                />
-              </a>
-              <p class="footer-intro">
-                Landmarks engineered for the way India lives across residential, commercial and retail destinations.
-              </p>
-            </div>
-            <div class="footer-cta">
-              <span class="footer-kicker">Connect with us</span>
-              <a class="button button-primary" href="./contact.html">Enquire now</a>
-            </div>
+            <a class="brand footer-brand" href="./index.html" aria-label="L&amp;T Realty home">
+              <span class="brand-wordmark">L&amp;T Realty</span>
+            </a>
+            <nav class="footer-links footer-links-inline" aria-label="Footer navigation">
+              <a href="./index.html">Home</a>
+              <a href="./about.html">About Us</a>
+              <a href="./projects.html">Projects</a>
+              <a href="./contact.html">Contact Us</a>
+            </nav>
           </div>
 
-          <div class="footer-grid">
+          <div class="footer-grid footer-grid-compact">
             <div class="footer-col">
-              <h3>Explore</h3>
-              <nav class="footer-links" aria-label="Footer navigation">
-                <a href="./index.html">Home</a>
-                <a href="./about.html">About Us</a>
-                <a href="./projects.html">Projects</a>
-                <a href="./contact.html">Contact Us</a>
-              </nav>
-            </div>
-            <div class="footer-col">
-              <h3>Featured projects</h3>
-              <div class="footer-links">
-                <a href="./projects.html">West Square, Seawoods</a>
-                <a href="./projects.html">The Gateway</a>
-                <a href="./projects.html">Elixir Reserve</a>
-                <a href="./projects.html">Seawoods Grand Central</a>
-              </div>
-            </div>
-            <div class="footer-col">
-              <h3>Presence</h3>
-              <ul class="footer-list">
-                <li>Mumbai</li>
-                <li>Navi Mumbai</li>
-                <li>NCR</li>
-                <li>Bengaluru</li>
-                <li>Hyderabad</li>
-                <li>Chennai</li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h3>Connect</h3>
+              <h3>Reach us</h3>
               <ul class="footer-list footer-list-contact">
+                <li>Enquiries</li>
                 <li><a href="tel:+919902599025">+91 99025 99025</a></li>
-                <li>Mon-Sat &middot; 10:00-19:00 IST</li>
-                <li><a href="https://www.lntrealty.com/">Official website</a></li>
-                <li><a href="https://www.youtube.com/lntrealtyofficial">YouTube</a></li>
+                <li data-contact-email-row hidden>Email</li>
+                <li data-contact-email-row hidden><a data-contact-email-link href="#"></a></li>
               </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Sales office</h3>
+              <p class="footer-note">Seawoods Grand Central, Tower 1, Sector 40, Nerul, Navi Mumbai 400706</p>
+            </div>
+            <div class="footer-col">
+              <h3>Hours</h3>
+              <p class="footer-note">Mon-Sat &middot; 10:00-19:00 IST</p>
             </div>
           </div>
 
           <div class="footer-bottom">
-            <p class="footer-note">
-              L&amp;T Realty develops landmark residential, commercial and retail destinations across India's leading
-              cities.
-            </p>
             <p class="footer-meta">&copy; <span data-year></span> L&amp;T Realty. All rights reserved.</p>
+            <nav class="footer-links footer-links-inline footer-links-legal" aria-label="Legal navigation">
+              <a href="./terms.html">Terms &amp; Conditions</a>
+              <a href="./privacy.html">Privacy Policy</a>
+            </nav>
           </div>
         </div>
       </div>
