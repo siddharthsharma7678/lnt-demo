@@ -69,12 +69,20 @@ const emailjsConfig = {
 };
 
 if (enquiryForm && enquiryResponse) {
+  const setEnquiryResponse = (state, message) => {
+    enquiryResponse.textContent = message;
+    enquiryResponse.dataset.state = state;
+    enquiryResponse.hidden = !message;
+  };
+
+  enquiryResponse.hidden = true;
+
   enquiryForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const submitButton = enquiryForm.querySelector('button[type="submit"]');
 
     if (!emailjsConfig.publicKey || !emailjsConfig.serviceId || !emailjsConfig.templateId) {
-      enquiryResponse.textContent = "Enquiry service is not configured yet.";
+      setEnquiryResponse("error", "Enquiry service is not configured yet.");
       return;
     }
 
@@ -92,17 +100,17 @@ if (enquiryForm && enquiryResponse) {
       submitButton.disabled = true;
     }
 
-    enquiryResponse.textContent = "Sending your enquiry...";
+    setEnquiryResponse("pending", "Sending your enquiry...");
 
     try {
       await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateId, templateParams, {
         publicKey: emailjsConfig.publicKey,
       });
 
-      enquiryResponse.textContent = "Thank you for your enquiry. Our team will connect with you shortly.";
+      setEnquiryResponse("success", "Email sent successfully. Our team will connect with you shortly.");
       enquiryForm.reset();
     } catch (error) {
-      enquiryResponse.textContent = "We could not send your enquiry right now. Please try again shortly.";
+      setEnquiryResponse("error", "We could not send your enquiry right now. Please try again shortly.");
       console.error("EmailJS send failed", error);
     } finally {
       if (submitButton) {
